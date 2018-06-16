@@ -1,10 +1,12 @@
 // appears when approach rocket coors
 //win if u go to every planet(10) total
 private ArrayList<Planet> posPlanets;
+PShape[] PLANETS; 
 
 void menuSetup() { 
   // random generation of planets. array of possible stuff to explore
   posPlanets = new ArrayList<Planet>(); 
+  PLANETS = new PShape[10]; 
   for (int x = 0; x < 10; x++) { 
     Planet b = new Planet(); 
     posPlanets.add(b); 
@@ -40,6 +42,11 @@ void menuDraw() {
     i += 30;
   } 
 } 
+
+void diffButtonHover(){
+  if ((mouseX > 3*width/4-200 && mouseX < 3*width/4-20) || (mouseX > width/4-200 && mouseX < width/4-20)) { 
+  }  
+}
 
 void update() { 
   for (int x = 0; x < posPlanets.size(); x++) { 
