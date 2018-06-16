@@ -10,17 +10,20 @@ void setup() {
   background(0);
   
   starterSetup(); 
-  homeSetup(); 
 }
 
 void draw() { 
   if (state == 0) 
     starterDraw(); 
-  else if (state == 1)
+  else if (state == 1) {
+    homeSetup(); 
     homeDraw(); 
+  }
 } 
 
 void keyPressed() { 
-  if (value == ESC)
-    exit();  
-} 
+  if (key == ESC)
+    exit();
+  if (state==0 && (key==RETURN || key == ENTER))
+    state=1; 
+}
