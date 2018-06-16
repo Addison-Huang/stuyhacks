@@ -1,11 +1,13 @@
 
 void mineUpdate(Mine x) {
-  background(0); 
+  background(0);
+  p.update();
     for (Block[] blo: x.getBlocks()) { 
-      for (Block b: blo) { 
+      for (Block b: blo) {
+        stroke(255);
         fill(b.getColor());
-        rect(20,20,b.getX(),b.getY());
-         if ((b.getX() == p.getXcor()) && (!b.getVisited())) {
+        rect(b.getX(),b.getY(),40,40);
+         if ((b.getX() == p.getXcor()) && (!b.getVisited()) &&b.getY() == p.getYcor()) {
           p.setMoney(p.getMoney()+b.getValue());
           b.setColor(color(0, 0, 0));
           b.setType(0);
@@ -14,5 +16,5 @@ void mineUpdate(Mine x) {
           p.setHunger(p.getHunger() - .5);
         }
       } 
-    } 
+    }
 }

@@ -10,19 +10,19 @@ public class Block {
     type = t;
     xcor = x;
     ycor = y;
-    if (t == 0) {
+    if (type == 0) {
       c = color(0,0,0);
       value = 0;
     }
-    else if (t == 1) { //gold
+    else if (type == 1) { //gold
       c = #FFD700;
       value = 10;
     }
-    else if (t == 2) { //silver
+    else if (type == 2) { //silver
       c = #C0C0C0;
       value = 5;
     }
-    else if (t == 3) { //bronze
+    else if (type == 3) { //bronze
       c = #cd7f32;
       value = 1;
     }
