@@ -26,6 +26,10 @@ public class Planet{
     return id;
   }
   
+  public Mine getMine() {
+    return mine; 
+  } 
+  
   public int getFood() {
     return food;
   }

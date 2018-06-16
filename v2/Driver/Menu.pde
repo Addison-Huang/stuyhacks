@@ -9,7 +9,8 @@ void menuSetup() {
     Planet b = new Planet(); 
     posPlanets.add(b); 
   } 
-} 
+}
+
 void menuDraw() { 
   background(0);
   line(width/2, 0, width/2, height); 
@@ -19,6 +20,7 @@ void menuDraw() {
   text("VISITED PLANETS: ", width/4-200, height/4-50); 
   text("NEW PLANETS: ",3*width/4-200, height/4-50); 
   update(); 
+  //buttons
   for (int x = 0; x < posPlanets.size(); x++) { 
   } 
   for (int x = 0; x < p.getPlanets().size(); x++) { 
