@@ -26,4 +26,10 @@ void keyPressed() {
     exit();
   if (state==0 && (key==RETURN || key == ENTER))
     state=1; 
+  if (key == CODED) { 
+    //if (keyCode == UP) 
+    //else if (keyCode == DOWN)
+    //else if (keyCode == DOWN)
+    //else 
+  } 
 }
