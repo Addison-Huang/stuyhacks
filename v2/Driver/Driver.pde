@@ -2,6 +2,7 @@
 int state = 0; 
 int value = 0; 
 int oldState = 0; 
+Mine m;
 final static int STARTER = 0; 
 final static int EARTH = 1; 
 final static int STATS = 2; 
@@ -12,6 +13,7 @@ Player p;
 
 void setup() {
   p = new Player();
+  m = new Mine();
   fullScreen();
   background(0);
 
@@ -38,7 +40,7 @@ void draw() {
     menuDraw(); 
   else if (state == MINE) { 
     clear(); 
-    mineUpdate(p.getCurrPlanet().getMine()); 
+    mineUpdate(m); 
   } 
 } 
 
@@ -47,15 +49,15 @@ void keyPressed() {
     exit();
   if (state==STARTER && (key==RETURN || key == ENTER))
     state=EARTH; 
-  if (key == CODED && state == EARTH) { 
+  if (key == CODED && (state == EARTH || state == MINE)) { 
     if (keyCode == UP) 
-      p.move(0, -20);
+      p.move(0, -40);
     else if (keyCode == DOWN)
-      p.move(0, 20); 
+      p.move(0, 40); 
     else if (keyCode == LEFT)
-      p.move(-20, 0); 
+      p.move(-40, 0); 
     else 
-    p.move(20, 0);
+    p.move(40, 0);
   } 
   //pops up stats
   if (key == 's') { 
@@ -72,5 +74,7 @@ void keyPressed() {
   if (key == 'o') { 
     oldState = state;
     state = MINE;
+    p.setXcor(0);
+    p.setYcor(0);
   }
 }

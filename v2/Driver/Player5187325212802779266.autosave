@@ -8,11 +8,13 @@ public class Player {
   private int skyMiles;
   private int xcor;
   private int ycor;
+
+ 
   public Player() {
     img = loadImage("eric.png"); 
     hunger = 100;
     thirst = 100;
-    money = 10;
+    money = 1000;
     visitedPlanets = new ArrayList<Planet>();
     skyMiles = 0;
     xcor = int(random(displayWidth));
@@ -67,17 +69,8 @@ public class Player {
     hunger = d;
   }
 
-  public void setMoney(int v) {
-    money += v;
+  public int setMoney(int v) {
+    return v;
   }
-  
-  public void setXcor(int x){
-    xcor = x;
-  }
-  
-  public void setYcor(int y) {
-    ycor = y;
-  }
-  
 
 }
