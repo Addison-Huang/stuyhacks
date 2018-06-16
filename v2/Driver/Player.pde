@@ -49,5 +49,13 @@ public class Player {
   public int getMiles() {
     return skyMiles;
   }
+  
+  public int getXcor() {
+    return xcor;
+  }
+  
+  public int getYcor() {
+    return ycor;
+  }
     
 }

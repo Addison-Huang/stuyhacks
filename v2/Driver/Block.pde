@@ -10,7 +10,11 @@ public class Block {
     type = t;
     xcor = x;
     ycor = y;
-    if (t == 1) { //gold
+    if (t == 0) {
+      c = color(0,0,0);
+      value = 0;
+    }
+    else if (t == 1) { //gold
       c = #FFD700;
       value = 10;
     }
@@ -46,4 +50,20 @@ public class Block {
     ycor = y;
   }
   
+  public void setColor(color col) {
+    c = col;
+  }
+  
+  public void setType(int t) {
+    type = t;
+  }
+  
+  public void setValue(int v) {
+    value = v;
+  }
+  
+  public void setVisited(boolean v) {
+    visited = v;
+  }
+    
 }
