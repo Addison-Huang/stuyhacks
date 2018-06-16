@@ -4,7 +4,7 @@ public class Player {
   private int hunger;
   private int thirst;
   private int money;
-  private ArrayList<Planet> allPlanets; //planets visited
+  private ArrayList<Planet> visitedPlanets; //planets visited
   private int skyMiles;
   private int xcor;
   private int ycor;
@@ -43,9 +43,12 @@ public class Player {
   }
   
   public ArrayList<Planet> getPlanets() {
-    return allPlanets;
+    return visitedPlanets;
   }
   
+  public void addPlanet(Planet b) {
+    visitedPlanets.add(b); 
+  }
   public int getMiles() {
     return skyMiles;
   }

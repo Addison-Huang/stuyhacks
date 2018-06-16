@@ -50,4 +50,12 @@ public class Planet{
     return foo;
   }
   
+  public boolean isVisited() {
+    return visited; 
+  } 
+  
+  public void setVisited() {
+    visited = true; 
+  } 
+  
 }
