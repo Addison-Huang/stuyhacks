@@ -1,23 +1,34 @@
 public class Block {
-  private boolean treasure;
   private int xcor;
   private int ycor; 
+  private boolean visited;
+  private color c;
+  private int value;
+  private int type;
   
-  public Block() {
-    treasure = true;
-    xcor = 0;
-    ycor = 0;
-  }
-  
-  public Block(boolean t, int x, int y) {
-    treasure = t;
+  public Block(int x, int y, boolean v, int t) {
+    type = t;
     xcor = x;
     ycor = y;
+    if (t == 1) { //gold
+      c = #FFD700;
+      value = 10;
+    }
+    else if (t == 2) { //silver
+      c = #C0C0C0;
+      value = 5;
+    }
+    else if (t == 3) { //bronze
+      c = #cd7f32;
+      value = 1;
+    }
+    else {            //dirt
+      c = #8b4513;
+      value = 0;
+    }
+    visited = v;
   }
   
-  public boolean hasTreasure() {
-    return treasure;
-  }
   
   public int getX() {
     return xcor;
@@ -35,7 +46,4 @@ public class Block {
     ycor = y;
   }
   
-  public void setTreasure(boolean b) {
-    treasure = b;
-  }
 }

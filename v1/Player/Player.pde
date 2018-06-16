@@ -8,6 +8,7 @@ public class Player {
   private int xcor;
   private int ycor;
   
+  
   public Player() {
     hunger = 100;
     thirst = 100;
