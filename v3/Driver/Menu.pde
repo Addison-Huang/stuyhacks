@@ -1,10 +1,12 @@
 // appears when approach rocket coors
 //win if u go to every planet(10) total
 private ArrayList<Planet> posPlanets;
+private ArrayList<Button> buttons;
 PShape[] PLANETS; 
 
 void menuSetup() { 
   // random generation of planets. array of possible stuff to explore
+  buttons = new ArrayList<Button>();
   posPlanets = new ArrayList<Planet>(); 
   PLANETS = new PShape[10]; 
   for (int x = 0; x < 10; x++) { 
@@ -22,31 +24,32 @@ void menuDraw() {
   textSize(50); 
   text("VISITED PLANETS: ", width/4-200, height/4-50); 
   text("NEW PLANETS: ",3*width/4-200, height/4-50); 
-  update(); 
   //buttons
-  textSize(20); 
-  int i = height/4; 
-  for (int x = 0; x < posPlanets.size(); x++) { 
-    fill(color(245,124,205));
-    rect(3*width/4-200,i-20, 180, 20); 
-    fill(color(0)); 
-    text(posPlanets.get(x).getId(),3*width/4-135,i);
-    i += 30;
-  } 
-  i = height/4; 
-  for (int x = 0; x < p.getPlanets().size(); x++) { 
+  int h = height/4;
+  for(int i = 0; i< posPlanets.size(); i++) {
+    Button newButt = new Button(3*width/4-200,h,200,50,str(posPlanets.get(i).getId()));
+    buttons.add(newButt);
+    h += 70;
+  }
+  h = height/4; 
+  for (int x = 0; x < p.getPlanets().size(); x++) {
+    Button newButt = new Button(width/4-200,h,200,50,str(p.getPlanets().get(x).getId()));
+    buttons.add(newButt);
+    h += 70;
+    /*
     fill(color(245,124,205));
     rect(width/4-200,i, 180, 20); 
     fill(color(0));
     text(p.getPlanets().get(x).getId(),width/4-135,i);
     i += 30;
-  } 
+    */
+  }
+    update();
+  for (Button b: buttons) {
+    b.update();
+  }
 } 
 
-void diffButtonHover(){
-  if ((mouseX > 3*width/4-200 && mouseX < 3*width/4-20) || (mouseX > width/4-200 && mouseX < width/4-20)) { 
-  }  
-}
 
 void update() { 
   for (int x = 0; x < posPlanets.size(); x++) { 
