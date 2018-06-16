@@ -1,7 +1,7 @@
 public class Player {
   
   PImage img; 
-  private int hunger;
+  private double hunger;
   private int thirst;
   private int money;
   private ArrayList<Planet> visitedPlanets; //planets visited
@@ -30,7 +30,7 @@ public class Player {
     ycor += b; 
   } 
   
-  public int getHunger() {
+  public double getHunger() {
     return hunger;
   }
   
@@ -60,5 +60,14 @@ public class Player {
   public int getYcor() {
     return ycor;
   }
+  
+  public void setHunger(double d) {
+    hunger = d;
+  }
+  
+  public int setValue(int v) {
+    return v;
+  }
+  
     
 }

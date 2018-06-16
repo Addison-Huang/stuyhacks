@@ -54,6 +54,10 @@ public class Block {
     c = col;
   }
   
+  public int getValue() {
+    return value;
+  }
+  
   public void setType(int t) {
     type = t;
   }
@@ -64,6 +68,14 @@ public class Block {
   
   public void setVisited(boolean v) {
     visited = v;
+  }
+  
+  public color getColor() {
+    return c;
+  }
+  
+  public boolean getVisited() {
+    return visited;
   }
     
 }

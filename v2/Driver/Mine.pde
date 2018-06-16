@@ -30,11 +30,15 @@ public class Mine {
   public void update(Player p) {
     for (Block[] blo : blocks) {
       for (Block b : blo) {
-        if (b.getX() == p.getXcor()) {
+          fill(b.getColor());
+          rect(20,20,b.getX(),b.getY());      
+        if ((b.getX() == p.getXcor()) && (!b.getVisited())) {
+          p.setMoney(p.getMoney()+b.getValue());
           b.setColor(color(0, 0, 0));
           b.setType(0);
           b.setValue(0);
-          b.setVisited(false);
+          b.setVisited(true);
+          p.setHunger(p.getHunger() - .5);
         }
       }
     }
