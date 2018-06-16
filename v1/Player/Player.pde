@@ -5,6 +5,8 @@ public class Player {
   private int money;
   private ArrayList<Planet> allPlanets;
   private int skyMiles;
+  private int xcor;
+  private int ycor;
   
   public Player() {
     hunger = 100;
@@ -12,6 +14,8 @@ public class Player {
     money = 1000;
     allPlanets = new ArrayList<Planet>;
     miles = 0;
+    xcor = int(random(displayWidth));
+    ycor = int(random(displayHeight));
   }
   
   public int getHunger() {
