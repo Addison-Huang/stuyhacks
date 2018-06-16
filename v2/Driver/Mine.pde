@@ -14,7 +14,6 @@ public class Mine {
        if (int(random(100)) < 11) {
         type = int(random(3)) + 1;
       }
-      color colo = #8b4513;
       //need to intiate with their x and y cor
       Block b = new Block(x, y, false, type);
       blocks[row][col] = b;
@@ -25,7 +24,10 @@ public class Mine {
     return blocks;
   }
   
-  
+  public void update() {
+    for(Block b: blocks) {
+      
+  }
 }
   
   
