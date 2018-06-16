@@ -9,6 +9,7 @@ public class Planet
   private int water;
   private color col;
   private double distance;
+  private boolean visited;
   private Mine mine;
   
   
@@ -16,10 +17,11 @@ public class Planet
   public Planet() {
     id = int(random(10000));
     food = int(random(10));
-    water = int(random(10);
+    water = int(random(10));
     distance = int(random(10));
     mine = new Mine();
     col = int(random(255));
+    visited = false;
   }
   
   public int getId() {
@@ -34,7 +36,7 @@ public class Planet
     return water;
   }
   
-  public int getDistance() {
+  public double getDistance() {
     return distance;
   }
   

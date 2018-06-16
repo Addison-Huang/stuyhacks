@@ -1,24 +1,26 @@
 //DIFFERENT STATES 
 int state = 0; 
+int value = 0; 
 final static int STARTER = 0; 
 final static int EARTH = 1; 
 
-int value = 0; 
+//different objects
+Player p;
 
 void setup() {
+  p = new Player(); 
   fullScreen();
   background(0);
   
   starterSetup(); 
+  homeSetup(); 
 }
 
 void draw() { 
   if (state == 0) 
     starterDraw(); 
-  else if (state == 1) {
-    homeSetup(); 
+  else if (state == 1) 
     homeDraw(); 
-  }
 } 
 
 void keyPressed() { 
@@ -26,10 +28,23 @@ void keyPressed() {
     exit();
   if (state==0 && (key==RETURN || key == ENTER))
     state=1; 
-  if (key == CODED) { 
-    //if (keyCode == UP) 
-    //else if (keyCode == DOWN)
-    //else if (keyCode == DOWN)
-    //else 
+  if (key == CODED && state == 1) { 
+    if (keyCode == UP) 
+      p.move(0,-10);
+    else if (keyCode == DOWN)
+      p.move(0,10); 
+    else if (keyCode == LEFT)
+      p.move(-10,0); 
+    else 
+      p.move(10,0); 
   } 
+  //pops up stats
+  if (key== 's'){
+    while (key == 's') { 
+      color(255); 
+      rect(30,20,55,55); 
+      textSize(15); 
+      color(0); 
+    } 
+  }
 }
