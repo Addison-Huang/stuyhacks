@@ -40,11 +40,5 @@ void keyPressed() {
   } 
   //pops up stats
   if (key== 's'){
-    while (key == 's') { 
-      color(255); 
-      rect(30,20,55,55); 
-      textSize(15); 
-      color(0); 
-    } 
   }
 }
