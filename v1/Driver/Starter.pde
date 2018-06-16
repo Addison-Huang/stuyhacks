@@ -1,10 +1,16 @@
+int MAX = 255; 
+float starterValue = 0.0; 
+float starterSpeed = 1.0; 
+
+
 void starterSetup() { 
-  textSize(100); 
-  fill(color(245,124,205)); 
-  textAlign(CENTER); 
-  text("GOODBYE WORLD!", 500, height/2); 
 } 
 
 void starterDraw() { 
- 
+  background(0); 
+  float fade = ((sin(radians(starterValue))+1)/2)*MAX;
+  starterValue += starterSpeed; 
+  textSize(100); 
+  fill(color(245,124,205), fade); 
+  text("GOODBYE WORLD!", 200, height/2); 
 } 
