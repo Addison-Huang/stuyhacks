@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 
-public class Planet
-{
-  
+public class Planet{  
   //instance variables
   private int id;
   private int food;
@@ -50,8 +48,6 @@ public class Planet
     int foo = water;
     water = w;
     return foo;
-   
-}
- 
+  }
   
 }

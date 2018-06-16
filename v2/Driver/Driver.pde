@@ -33,8 +33,8 @@ void draw() {
     text("planets visited: "+p.getPlanets(),width/2,height/2+30);
     text("miles: "+p.getMiles(),width/2,height/2+60); 
   } 
-  else if (state == 3) { 
-  } 
+  else if (state == 3) 
+    menuDraw(); 
 } 
 
 void keyPressed() { 
@@ -58,6 +58,10 @@ void keyPressed() {
     state = STATS; 
   } 
   //if in stats, returns to previous screen 
-  if ((key == RETURN || key == ENTER) && state == STATS)
+  if ((key == RETURN || key == ENTER) && (state == STATS || state == MENU))
     state = oldState;  
+  if (key == 'm') { 
+    oldState = state;
+    state = MENU; 
+  } 
 }
