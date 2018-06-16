@@ -8,6 +8,8 @@ final static int EARTH = 1;
 final static int STATS = 2; 
 final static int MENU = 3; 
 final static int MINE = 4; 
+final static int PLANET = 5; 
+
 //different objects
 Player p; 
 
@@ -41,6 +43,10 @@ void draw() {
   else if (state == MINE) { 
     clear(); 
     mineUpdate(m); 
+  } 
+  else if (state == PLANET) { 
+    clear(); 
+    planetDraw(); 
   } 
 } 
 
