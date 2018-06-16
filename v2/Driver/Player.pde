@@ -8,12 +8,6 @@ public class Player {
   private int skyMiles;
   private int xcor;
   private int ycor;
-<<<<<<< HEAD
-
-
-=======
-  
->>>>>>> 100c251c6d44bc355760f1259000284341f8e5ca
   public Player() {
     img = loadImage("eric.png"); 
     hunger = 100;
