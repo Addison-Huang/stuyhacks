@@ -13,7 +13,19 @@ void mineUpdate(Mine x) {
           b.setType(0);
           b.setValue(0);
           b.setVisited(true);
-          p.setHunger(p.getHunger() - .5);
+          if (p.getHunger() > 75) {
+            p.setHunger(p.getHunger() - 1);
+          }
+          else if (p.getHunger() > 50) {
+            p.setHunger(p.getHunger() -1.5);
+          }
+          else if (p.getHunger() > 25) {
+            p.setHunger(p.getHunger() -2);
+          }
+          else {
+            p.setHunger(p.getHunger() -2.5);
+          }
+            
         }
       } 
     }

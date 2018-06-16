@@ -68,7 +68,7 @@ public class Player {
   }
 
   public void setMoney(int v) {
-    money += v;
+    money = v;
   }
   
   public void setXcor(int x){
