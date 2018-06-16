@@ -8,11 +8,14 @@ public class Planet{
   private color col;
   private double distance;
   private boolean visited;
+  private ArrayList<Item> items;
   private Mine mine;
+  private int numItems;
   
   
   //default constructor
   public Planet() {
+    numItems = int(random(10));
     id = int(random(10000));
     food = int(random(10));
     water = int(random(10));
@@ -20,6 +23,18 @@ public class Planet{
     mine = new Mine();
     col = int(random(255));
     visited = false;
+    items = new ArrayList<Item>();
+    for (int i = 0; i < numItems; i ++) {
+      int which = int(random(2));
+      if (which == 1){
+        Item r = new Rabbit();
+        items.add(r);
+      }
+      else {
+        Item w = new Water();
+        items.add(w);
+      }
+    }
   }
   
   public int getId() {
@@ -60,6 +75,5 @@ public class Planet{
   
   public void setVisited() {
     visited = true; 
-  } 
-  
+  }
 }
