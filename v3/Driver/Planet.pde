@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Planet{  
+public class Planet {  
   //instance variables
   private int id;
   private int food;
@@ -11,8 +11,10 @@ public class Planet{
   private ArrayList<Item> items;
   private Mine mine;
   private int numItems;
-  
-  
+  //index of planet in the ArrayList
+  private int planetInd; 
+
+
   //default constructor
   public Planet() {
     numItems = int(random(10));
@@ -26,54 +28,57 @@ public class Planet{
     items = new ArrayList<Item>();
     for (int i = 0; i < numItems; i ++) {
       int which = int(random(2));
-      if (which == 1){
+      if (which == 1) {
         Item r = new Rabbit();
         items.add(r);
-      }
-      else {
+      } else {
         Item w = new Water();
         items.add(w);
       }
     }
   }
-  
+
   public int getId() {
     return id;
   }
-  
+
   public Mine getMine() {
-    return mine; 
+    return mine;
   } 
-  
+
   public int getFood() {
     return food;
   }
-  
+
   public int getWater() {
     return water;
   }
-  
+
   public double getDistance() {
     return distance;
   }
-  
+
   public int setFood(int f) {
     int foo = food;
     food = f;
     return foo;
   }
-  
+
   public int setWater(int w) {
     int foo = water;
     water = w;
     return foo;
   }
-  
+
   public boolean isVisited() {
-    return visited; 
+    return visited;
   } 
-  
+
   public void setVisited() {
-    visited = true; 
+    visited = true;
+  }
+  //augments index by 1
+  public void changeInd() {
+    planetInd += 1;
   }
 }

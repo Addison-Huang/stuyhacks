@@ -23,6 +23,7 @@ public class Player {
     return currPlanet;
   }
 
+//reprints image with augmented xcor and ycor 
   public void update() { 
     image(img, xcor, ycor, 150, 150);
   } 
