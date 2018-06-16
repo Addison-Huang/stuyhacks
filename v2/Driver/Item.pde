@@ -2,29 +2,26 @@ public abstract class Item
 {
     protected String _name; 
     protected String _type; 
+    protected int ycor;
+    protected int xcor;
 
     //Constructors
-    public Item(String name)
+    public Item()
     {
-        _name = name;
         _type = "Item";
     }
-
-    public Item(String name, String type)
-    {
-        _name = name;
-        _type = type;
+    
+    public Item(String t) {
+      _type = t;
+      xcor = int(random(displayWidth/20)) *20;
+      ycor = int(random(displayHeight/20)) * 20;
     }
+    
 
     //Accessors
-    public String getName() { return _name; }
     public String getType() { return _type; }
+    
+    public int getX() { return xcor;}
+    public int getY() { return ycor;}
 
-    //Mutators
-    public String setName(String newName)
-    {
-        String tmp = _name;
-        _name = newName;
-        return tmp;
-    }
 }

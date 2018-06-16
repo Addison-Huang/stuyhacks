@@ -9,13 +9,12 @@ public class Player {
   private int xcor;
   private int ycor;
   
-  
   public Player() {
     img = loadImage("eric.png"); 
     hunger = 100;
     thirst = 100;
     money = 1000;
-    allPlanets = new ArrayList<Planet>();
+    visitedPlanets = new ArrayList<Planet>();
     skyMiles = 0;
     xcor = int(random(displayWidth));
     ycor = int(random(displayHeight)); 
