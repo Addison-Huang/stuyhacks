@@ -81,7 +81,6 @@ public class Planet {
   }
   //augments index by 1
   public void setImg(int i) {
-    
-   img= image.get(i);
+    img= image.get(i);
   }
 }

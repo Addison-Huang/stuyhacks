@@ -9,7 +9,7 @@ void homeSetup() {
 } 
 
 void homeDraw() { 
-   //image(back,0,0,width,height); 
-   //image(rocket,.7*width,100,300,300); 
-   //p.update(); 
+   image(back,0,0,width,height); 
+   image(rocket,.7*width,100,300,300); 
+   p.update(); 
 } 

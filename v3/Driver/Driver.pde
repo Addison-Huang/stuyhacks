@@ -22,7 +22,7 @@ void setup() {
   starterSetup(); 
   homeSetup(); 
   menuSetup();
-  //planetSetup();
+  planetSetup();
 }
 
 void draw() { 
@@ -47,7 +47,7 @@ void draw() {
   } 
   else if (state == PLANET) { 
     clear(); 
-    //planetDraw(); 
+    planetDraw(); 
   } 
 } 
 
