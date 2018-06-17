@@ -1,3 +1,9 @@
+import processing.sound.*; 
+
+SoundFile file; 
+String audioName = "music.mp3"; 
+String path; 
+
 //DIFFERENT STATES 
 int state = 0; 
 int value = 0; 
@@ -25,6 +31,10 @@ void setup() {
   homeSetup(); 
   menuSetup();
   planetSetup();
+  
+  path = sketchPath(audioName); 
+  file = new SoundFile(this, path); 
+  file.play(); 
 }
 
 void draw() { 
