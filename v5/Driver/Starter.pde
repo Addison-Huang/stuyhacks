@@ -3,9 +3,6 @@ float starterValue = 0.0;
 float starterSpeed = 1.0; 
 PFont font; 
 
-void starterSetup() {  
-} 
-
 //fades in and out for title of game
 void starterDraw() { 
   background(0); 

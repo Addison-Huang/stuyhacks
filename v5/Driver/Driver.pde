@@ -12,6 +12,7 @@ final static int PLANET = 5;
 final static int ENDLOSETRAVEL = 6; 
 final static int ENDWIN = 7; 
 final static int ENDLOSEFOOD = 8;
+final static int INSTRUCTIONS = 9;
 
 //different objects
 Player p; 
@@ -21,8 +22,6 @@ void setup() {
   m = new Mine();
   fullScreen();
   background(0);
-
-  starterSetup(); 
   homeSetup(); 
   menuSetup();
   planetSetup();
@@ -83,6 +82,16 @@ void draw() {
     text("planets visited: "+p.getPlanets(), width/2, height/2+30);
     text("miles: "+p.getMiles(), width/2, height/2+60);
     oldState = ENDLOSEFOOD;
+  } else if (state == INSTRUCTIONS) {
+    background(0);
+    textAlign(CENTER);
+    fill(255);
+    text("Press s for stats", width/2, height/2-90);
+    text("Use the arrow keys to move", width/2, height/2-60); 
+    text("Press enter/return to return to the previous location ", width/2, height/2-30); 
+    text("Press escape to leave", width/2, height/2);
+    text("Visit all of the planets to win", width/2, height/2+30);
+    text("You lose if you run out of money or die of hunger or thirst", width/2, height/2+60);
   }
 }
 
@@ -94,8 +103,7 @@ void keyPressed() {
       state=EARTH; 
     else if (state != EARTH) 
       state = oldState;
-    }
-  } 
+  }
   if (key == CODED && (state == EARTH || state == MINE || state == PLANET)) { 
     if ((state == EARTH && (p.getXcor() > .7*width && p.getXcor() < .8*width && p.getYcor() > 100 && p.getYcor() < 400))) {
       oldState = state;
@@ -123,11 +131,15 @@ void keyPressed() {
     else if (keyCode == LEFT && p.getXcor() >= 60)
       p.move(-60, 0); 
     else if (keyCode == RIGHT && p.getXcor() <= displayWidth - 60)
-    p.move(60, 0);
+      p.move(60, 0);
   } 
   //pops up stats
   if (key == 's' && state != STATS) { 
     oldState = state; 
     state = STATS;
+  }
+  if (key == 'i' && state != INSTRUCTIONS) {
+    oldState = state;
+    state = INSTRUCTIONS;
   }
 }
