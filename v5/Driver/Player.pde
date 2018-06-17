@@ -29,6 +29,13 @@ public class Player {
 
   //reprints image with augmented xcor and ycor 
   public void update() { 
+    if (thirst <=0 || hunger <=0){
+      if (visitedPlanets.size()>=10){
+        //win screen
+        state= ENDLOSE;
+        //lose screen
+      }
+    }
     image(img, xcor, ycor, 60, 60);
   } 
 
