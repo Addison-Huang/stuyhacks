@@ -22,10 +22,6 @@ public class Player {
   public Planet getCurrPlanet() {
     return currPlanet;
   }
-  
-  public void setCurrPlanet(Planet d) {
-    currPlanet = d;
-  }
 
 //reprints image with augmented xcor and ycor 
   public void update() { 
@@ -70,9 +66,6 @@ public class Player {
 
   public void setHunger(double d) {
     hunger = d;
-    if (hunger > 100) {
-      hunger = 100;
-    }
   }
 
   public void setMoney(int v) {
@@ -87,12 +80,5 @@ public class Player {
     ycor = y;
   }
   
-  public void setThirst(int t) {
-    thirst = t;
-    if (thirst > 100) {
-      thirst = 100;
-    }
-  }
-    
 
 }
