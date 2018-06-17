@@ -10,6 +10,7 @@ final static int MENU = 3;
 final static int MINE = 4; 
 final static int PLANET = 5; 
 final static int ENDLOSE = 6; 
+final static int ENDWIN = 7; 
 
 //different objects
 Player p; 
