@@ -37,13 +37,6 @@ void menuDraw() {
     Button newButt = new Button(width/4-200,h,200,50,str(p.getPlanets().get(x).getId()));
     buttons.add(newButt);
     h += 70;
-    /*
-    fill(color(245,124,205));
-    rect(width/4-200,i, 180, 20); 
-    fill(color(0));
-    text(p.getPlanets().get(x).getId(),width/4-135,i);
-    i += 30;
-    */
   }
     update();
   for (Button b: buttons) {
@@ -56,5 +49,9 @@ void update() {
   for (int x = 0; x < posPlanets.size(); x++) { 
     if(posPlanets.get(x).isVisited())
       p.addPlanet(posPlanets.remove(x)); 
-  } 
+  }
+  for (int i = 0; i < buttons.size(); i ++) {
+    if (x >= buttons.get(i).xcor && x <= (buttons.get(i).xcor + buttons.get(i).wd) && y >= buttons.get(i).ycor && y <= (buttons.get(i).ycor + buttons.get(i).ht)) {
+      buttons.get(i).col = 100; 
+  
 } 
