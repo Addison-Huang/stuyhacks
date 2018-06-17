@@ -25,7 +25,7 @@ public class Player {
 
 //reprints image with augmented xcor and ycor 
   public void update() { 
-    image(img, xcor, ycor, 150, 150);
+    image(img, xcor, ycor, 60, 60);
   } 
 
   public void move(int a, int b) { 
