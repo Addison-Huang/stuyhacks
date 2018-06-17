@@ -3,7 +3,7 @@ public class Player {
   PImage img; 
   private double hunger;
   private double thirst;
-  private int money;
+  private double money;
   private ArrayList<Planet> visitedPlanets; //planets visited array 
   private int skyMiles;
   private int xcor;
@@ -12,7 +12,7 @@ public class Player {
     img = loadImage("eric.png"); 
     hunger = 100;
     thirst = 100;
-    money = 10;
+    money = 10000;
     visitedPlanets = new ArrayList<Planet>();
     skyMiles = 0;
     xcor = 200;
@@ -33,7 +33,7 @@ public class Player {
       state = ENDWIN; 
         //win screen
     else if (thirst <=0 || hunger <=0) {
-        state= ENDLOSE;
+        state= ENDLOSEFOOD;
         //lose screen
   }
   else 
@@ -61,7 +61,7 @@ public class Player {
     return thirst;
   }
 
-  public int getMoney() {
+  public double getMoney() {
     return money;
   }
 
@@ -91,7 +91,7 @@ public class Player {
     }
   }
 
-  public void setMoney(int v) {
+  public void setMoney(double v) {
     money = v;
   }
 
