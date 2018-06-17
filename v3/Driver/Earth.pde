@@ -1,6 +1,4 @@
-PImage back; 
-PImage rocket; 
-PImage eric; 
+PImage back, rocket, eric;  
 
 void homeSetup() {
   back = loadImage("grass.png");
