@@ -2,7 +2,6 @@ PImage _mine;
 
 void planetSetup() {
   _mine = loadImage("mine.png"); 
-  image(_mine, (int) (Math.random()*width), (int) (Math.random()*height));
 }
   
 
