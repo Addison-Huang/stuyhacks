@@ -15,8 +15,8 @@ public class Player {
     money = 10;
     visitedPlanets = new ArrayList<Planet>();
     skyMiles = 0;
-    xcor = int(random(displayWidth));
-    ycor = int(random(displayHeight));
+    xcor = 200;
+    ycor = 200;
   }
 
   public Planet getCurrPlanet() {
