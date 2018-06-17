@@ -10,7 +10,8 @@ void menuSetup() {
   posPlanets = new ArrayList<Planet>(); 
   PLANETS = new PShape[10]; 
   for (int x = 0; x < 10; x++) { 
-    Planet b = new Planet(); 
+    Planet b = new Planet();
+    b.setImg(image.get(x));
     
     posPlanets.add(b); 
   } 

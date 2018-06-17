@@ -13,6 +13,7 @@ public class Planet {
   private int numItems;
   //index of planet in the ArrayList
   private int planetInd; 
+  private PImage img;
 
 
   //default constructor
@@ -24,6 +25,7 @@ public class Planet {
     distance = int(random(10));
     mine = new Mine();
     col = int(random(255));
+    //planetInd=0;
     visited = false;
     items = new ArrayList<Item>();
     for (int i = 0; i < numItems; i ++) {
@@ -78,7 +80,8 @@ public class Planet {
     visited = true;
   }
   //augments index by 1
-  public void changeInd() {
-    planetInd += 1;
+  public void setImg(int i) {
+    
+   img= image.get(i);
   }
 }
