@@ -32,10 +32,10 @@ public class Player {
     if (visitedPlanets.size()>=10)
       state = ENDWIN; 
         //win screen
-    else if (thirst <=0 || hunger <=0)
+    else if (thirst <=0 || hunger <=0) {
         state= ENDLOSE;
         //lose screen
-    }
+  }
     image(img, xcor, ycor, 60, 60);
   } 
 
