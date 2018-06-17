@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+//need to write a method that if an item is used it is removed from the arraylist
 public class Planet {  
   //instance variables
   private int id;

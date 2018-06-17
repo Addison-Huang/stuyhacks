@@ -70,6 +70,9 @@ public class Player {
 
   public void setHunger(double d) {
     hunger = d;
+    if (hunger > 100) {
+      hunger = 100;
+    }
   }
 
   public void setMoney(int v) {
@@ -84,5 +87,12 @@ public class Player {
     ycor = y;
   }
   
+  public void setThirst(int t) {
+    thirst = t;
+    if (thirst > 100) {
+      thirst = 100;
+    }
+  }
+    
 
 }
