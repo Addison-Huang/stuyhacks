@@ -142,4 +142,8 @@ void keyPressed() {
     oldState = state;
     state = INSTRUCTIONS;
   }
+  
+  if(state==MINE && key== 'm'){
+    state=PLANET;
+  }
 }
