@@ -5,7 +5,7 @@ public abstract class Item
   protected int ycor;
   protected int xcor;
   protected PImage image;
-  protected boolean used;
+  public boolean used;
 
   //Constructors
   public Item()

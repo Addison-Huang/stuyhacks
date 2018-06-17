@@ -28,10 +28,8 @@ void setup() {
 }
 
 void draw() { 
-  if (state == STARTER) 
-    starterDraw(); 
-  else if (state == ENDLOSE) {
-    clear();
+  if (state == STARTER) {
+    starterDraw();
   } else if (state == EARTH) 
     homeDraw(); 
   else if (state == STATS) { 
@@ -42,17 +40,28 @@ void draw() {
     text("money: "+p.getMoney(), width/2, height/2);
     text("planets visited: "+p.getPlanets(), width/2, height/2+30);
     text("miles: "+p.getMiles(), width/2, height/2+60);
-  } else if (state == MENU)
+  } else if (state == MENU) {
     menuDraw();
-
-  else if (state == MINE) { 
+  } else if (state == MINE) {
     clear(); 
     mineUpdate(m);
   } else if (state == PLANET) { 
     clear(); 
     planetDraw();
+  } else if (state == ENDLOSE) {
+    background(0);
+    textAlign(CENTER); 
+    text("You lost my dude because u died", width/2, height/2-60);
+  } else if (state == ENDWIN) {
+    background(0);
+    textAlign(CENTER); 
+    text("You lost my dude because you explored stuff", width/2, height/2-60);
   }
-} 
+}
+
+
+
+
 
 void keyPressed() { 
   if (key == ESC)

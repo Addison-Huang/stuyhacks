@@ -130,7 +130,9 @@ public class Planet {
   
   public void updateItems() {
     if (numItems > 0) {
+      
     for (int i = 0; i <items.size(); i ++) {
+      print(items.size());
       items.get(i).use(p);
       if (items.get(i).getUsed()) {
         
