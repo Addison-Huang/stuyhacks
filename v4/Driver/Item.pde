@@ -13,8 +13,8 @@ public abstract class Item
     
     public Item(String t) {
       _type = t;
-      xcor = int(random(displayWidth/20)) *20;
-      ycor = int(random(displayHeight/20)) * 20;
+      xcor = int(random(displayWidth/40)) * 40;
+      ycor = int(random(displayHeight/40)) * 40;
     }
     
 
