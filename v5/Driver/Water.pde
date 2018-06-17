@@ -9,7 +9,7 @@ public class Water extends Item {
     return _thirstModifier;
   }
   
-  public void drink(Player p) {
+  public void use(Player p) {
     if (!used) {
     p.setThirst(p.getThirst() + _thirstModifier);
     used = true;
