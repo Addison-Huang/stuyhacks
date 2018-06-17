@@ -1,4 +1,3 @@
-
 void mineUpdate(Mine x) {
     for (Block[] blo: x.getBlocks()) { 
       for (Block b: blo) {

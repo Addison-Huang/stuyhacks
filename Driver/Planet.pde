@@ -20,7 +20,7 @@ public class Planet {
   //default constructor
   public Planet() {
     numItems = int(random(10));
-    id = int(random(10000));
+    id = int(random(5000));
     food = int(random(10));
     water = int(random(10));
     distance = int(random(10));
@@ -44,7 +44,7 @@ public class Planet {
 
   public Planet(PImage mag) {
     numItems = int(random(10));
-    id = int(random(10000));
+    id = int(random(5000));
     food = int(random(10));
     water = int(random(10));
     distance = id;

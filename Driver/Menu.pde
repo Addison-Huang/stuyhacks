@@ -101,7 +101,7 @@ void update() {
         Planet ans = buttons.get(i).planet;
           ans.setVisited();
           p.setCurrPlanet(ans);
-            p.setXcor(0); 
+          p.setXcor(0); 
           p.setYcor(0); 
           state = PLANET;
           p.setMoney(p.getMoney()-ans.getDistance());          

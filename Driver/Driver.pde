@@ -49,13 +49,14 @@ void draw() {
     text("hunger: "+p.getHunger(), width/2, height/2-60); 
     text("thirst: "+p.getThirst(), width/2, height/2-30); 
     text("money: "+p.getMoney(), width/2, height/2);
-    text("planets visited: "+p.getPlanets(), width/2, height/2+30);
-    text("miles: "+p.getMiles(), width/2, height/2+60);
+    text("num of planets visited: "+p.visitedPlanets.size(), width/2, height/2+30);
+    //text("miles: "+p.getMiles(), width/2, height/2+60);
   } else if (state == MENU) {
+    textAlign(LEFT);
     menuDraw();
   } else if (state == MINE) {
     clear(); 
-    mineUpdate(m);
+    mineUpdate(p.getCurrPlanet().getMine());
   } else if (state == PLANET) { 
     clear(); 
     planetDraw();
@@ -67,8 +68,8 @@ void draw() {
     text("hunger: "+p.getHunger(), width/2, height/2-60); 
     text("thirst: "+p.getThirst(), width/2, height/2-30); 
     text("money: "+p.getMoney(), width/2, height/2);
-    text("planets visited: "+p.getPlanets(), width/2, height/2+30);
-    text("miles: "+p.getMiles(), width/2, height/2+60);
+    text("num of planets visited: "+p.visitedPlanets.size(), width/2, height/2+30);
+    //text("miles: "+p.getMiles(), width/2, height/2+60);
     oldState = ENDLOSETRAVEL;
   } else if (state == ENDWIN) {
     background(0);
@@ -78,8 +79,8 @@ void draw() {
     text("hunger: "+p.getHunger(), width/2, height/2-60); 
     text("thirst: "+p.getThirst(), width/2, height/2-30); 
     text("money: "+p.getMoney(), width/2, height/2);
-    text("planets visited: "+p.getPlanets(), width/2, height/2+30);
-    text("miles: "+p.getMiles(), width/2, height/2+60);
+    text("num of planets visited: "+p.visitedPlanets.size(), width/2, height/2+30);
+    //text("miles: "+p.getMiles(), width/2, height/2+60);
     oldState = ENDWIN;
   } else if (state == ENDLOSEFOOD) {
     background(0);
@@ -89,8 +90,8 @@ void draw() {
     text("hunger: "+p.getHunger(), width/2, height/2-60); 
     text("thirst: "+p.getThirst(), width/2, height/2-30); 
     text("money: "+p.getMoney(), width/2, height/2);
-    text("planets visited: "+p.getPlanets(), width/2, height/2+30);
-    text("miles: "+p.getMiles(), width/2, height/2+60);
+    text("num of planets visited: "+p.visitedPlanets.size(), width/2, height/2+30);
+    //text("miles: "+p.getMiles(), width/2, height/2+60);
     oldState = ENDLOSEFOOD;
   } else if (state == INSTRUCTIONS) {
     background(0);
@@ -110,7 +111,14 @@ void keyPressed() {
     exit();
   if (key == RETURN || key == ENTER) { 
     if (state == STARTER) 
-      state=EARTH; 
+      state=EARTH;
+    else if (state == ENDLOSEFOOD || state == ENDLOSETRAVEL) {
+      p = new Player();
+      homeSetup(); 
+      menuSetup();
+      planetSetup();
+      state = STARTER;
+    }
     else if (state != EARTH) 
       state = oldState;
   }

@@ -5,7 +5,8 @@ PFont font;
 
 //fades in and out for title of game
 void starterDraw() { 
-  background(0); 
+  background(0);
+  textAlign(LEFT);
   float fade = ((sin(radians(starterValue))+1)/2)*MAX;
   starterValue += starterSpeed; 
   textSize(100); 
