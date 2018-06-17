@@ -12,7 +12,6 @@ void menuSetup() {
   for (int x = 0; x < 10; x++) { 
     Planet b = new Planet();
     b.setImg(x);
-    
     posPlanets.add(b); 
   } 
   

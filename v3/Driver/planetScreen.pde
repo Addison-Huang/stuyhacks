@@ -1,15 +1,5 @@
-PImage pretty; 
-PImage rustic; 
-PImage sugarPlanet;
-PImage mystical; 
-PImage alien; 
-PImage atlantis;
-PImage creepy; 
-PImage child; 
-PImage mars;
-PImage dinoWorld;
+PImage pretty,rustic, sugarPlanet, mystical, alien, atlantis, creepy, child, mars, dinoWorld;  
 ArrayList<PImage> image; 
-
 
 void planetSetup() {
   image = new ArrayList<PImage>();

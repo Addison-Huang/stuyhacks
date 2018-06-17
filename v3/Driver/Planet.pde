@@ -79,7 +79,7 @@ public class Planet {
   public void setVisited() {
     visited = true;
   }
-  //augments index by 1
+  
   public void setImg(int i) {
     img= image.get(i);
   }
