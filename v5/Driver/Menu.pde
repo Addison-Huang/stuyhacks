@@ -67,6 +67,7 @@ void menuDraw() {
   text("VISITED PLANETS: ", width/4-200, height/4-50); 
   text("NEW PLANETS: ",3*width/4-200, height/4-50); 
   //buttons
+  buttons = new ArrayList<Button>();
   int h = height/4;
   for(int i = 0; i< posPlanets.size(); i++) {
     Button newButt = new Button(3*width/4-200,h,200,50,str(posPlanets.get(i).getId()),posPlanets.get(i));
@@ -80,17 +81,17 @@ void menuDraw() {
     h += 70;
   }
   update();
-  for (Button b: buttons) {
-    b.update();
+  for (int i = 0; i < buttons.size(); i++) {
+    buttons.get(i).update();
   }
 } 
 
 
 void update() { 
   for (int x = 0; x < posPlanets.size(); x++) { 
-    if(posPlanets.get(x).isVisited())
+    if(posPlanets.get(x).isVisited()) {
       p.addPlanet(posPlanets.remove(x));
-      print(posPlanets.size());
+    }
   }
   
   for (int i = 0; i < buttons.size(); i ++) {
@@ -100,7 +101,6 @@ void update() {
           Planet ans = buttons.get(i).planet;
           ans.setVisited();
           p.setCurrPlanet(ans);
-          buttons.remove(i);
           state = PLANET;
            //break;
           }
