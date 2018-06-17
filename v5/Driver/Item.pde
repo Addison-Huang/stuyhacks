@@ -17,8 +17,8 @@ public abstract class Item
     _type = t;
     image = img;
     used = false;
-    xcor = int(random(displayWidth/40)) * 40;
-    ycor = int(random(displayHeight/40)) * 40;
+    xcor = int(random(displayWidth/80)) * 80;
+    ycor = int(random(displayHeight/80)) * 80;
   }
 
 
@@ -35,11 +35,13 @@ public abstract class Item
   }
   
   public void drawItem() {
-    image(image,xcor,ycor,40,40);
+    image(image,xcor,ycor,80,80);
     
   } 
   
   public boolean getUsed() {
     return used;
   }
+  
+  abstract void use(Player p);
 }

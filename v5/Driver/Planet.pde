@@ -14,6 +14,7 @@ public class Planet {
   //index of planet in the ArrayList
   private int planetInd; 
   private PImage img;
+   
 
 
   //default constructor
@@ -130,6 +131,7 @@ public class Planet {
   public void updateItems() {
     if (numItems > 0) {
     for (int i = 0; i <items.size(); i ++) {
+      items.get(i).use(p);
       if (items.get(i).getUsed()) {
         items.remove(i);
       }

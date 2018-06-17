@@ -9,8 +9,8 @@ public class Rabbit extends Item {
     return _hungerModifier;
   }
   
-  public void eat(Player p) {
-    if (!used) {
+  public void use(Player p) {
+    if (!used && (p.getXcor() > getX() && p.getXcor() < getX()+20) && (p.getYcor() > getY() && p.getYcor() < getY()+20) ) {
     p.setHunger(p.getHunger()+_hungerModifier);
     used = true;
     }
