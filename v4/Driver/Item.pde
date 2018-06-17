@@ -37,4 +37,8 @@ public abstract class Item
   public void drawItem() {
     image(image,xcor,ycor,40,40);
   } 
+  
+  pubic boolean getUsed() {
+    return used;
+  }
 }

@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-//need to write a method that if an item is used it is removed from the arraylist
+//need to write a method that if an item is used it is removed from the arraylists
 public class Planet {  
   //instance variables
   private int id;
@@ -124,6 +124,14 @@ public class Planet {
   public boolean isVisited() {
     return visited;
   } 
+  
+  public void updateItems() {
+    for (int i = 0; i <items.size(); i ++) {
+      if (items.get(i).getUsed()) {
+        items.remove(i);
+      }
+    }
+  }
 
   public void setVisited() {
     visited = true;
