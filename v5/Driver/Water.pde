@@ -10,7 +10,7 @@ public class Water extends Item {
   }
   
   public void use(Player p) {
-    if (!used && (p.getXcor() > getX() && p.getXcor() < getX()+40) && (p.getYcor() > getY() && p.getYcor() < getY()+40) ) {
+    if (!used && (p.getXcor() > getX() && p.getXcor() < getX()+80) && (p.getYcor() > getY() && p.getYcor() < getY()+80) ) {
     p.setThirst(p.getThirst() + _thirstModifier);
     used = true;
   }

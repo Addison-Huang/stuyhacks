@@ -2,7 +2,7 @@ public class Player {
   private Planet currPlanet; 
   PImage img; 
   private double hunger;
-  private int thirst;
+  private double thirst;
   private int money;
   private ArrayList<Planet> visitedPlanets; //planets visited array 
   private int skyMiles;
@@ -48,7 +48,7 @@ public class Player {
     return hunger;
   }
 
-  public int getThirst() {
+  public double getThirst() {
     return thirst;
   }
 
@@ -94,7 +94,7 @@ public class Player {
     ycor = y;
   }
 
-  public void setThirst(int t) {
+  public void setThirst(double t) {
     thirst = t;
     if (thirst > 100) {
       thirst = 100;
