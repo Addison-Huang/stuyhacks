@@ -10,7 +10,10 @@ public class Rabbit extends Item {
   }
   
   public void eat(Player p) {
+    if (!used) {
     p.setHunger(p.getHunger()+_hungerModifier);
+    used = true;
+    }
 }
 }
     

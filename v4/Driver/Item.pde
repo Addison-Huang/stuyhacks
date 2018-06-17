@@ -5,7 +5,7 @@ public abstract class Item
   protected int ycor;
   protected int xcor;
   protected PImage image;
-
+  protected boolean used;
 
   //Constructors
   public Item()
@@ -16,6 +16,7 @@ public abstract class Item
   public Item(String t, PImage img) {
     _type = t;
     image = img;
+    used = false;
     xcor = int(random(displayWidth/40)) * 40;
     ycor = int(random(displayHeight/40)) * 40;
   }
