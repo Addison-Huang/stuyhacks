@@ -18,16 +18,16 @@ public class Player {
     xcor = int(random(displayWidth));
     ycor = int(random(displayHeight));
   }
-  
+
   public Planet getCurrPlanet() {
     return currPlanet;
   }
-  
+
   public void setCurrPlanet(Planet d) {
     currPlanet = d;
   }
 
-//reprints image with augmented xcor and ycor 
+  //reprints image with augmented xcor and ycor 
   public void update() { 
     image(img, xcor, ycor, 60, 60);
   } 
@@ -78,21 +78,19 @@ public class Player {
   public void setMoney(int v) {
     money = v;
   }
-  
-  public void setXcor(int x){
+
+  public void setXcor(int x) {
     xcor = x;
   }
-  
+
   public void setYcor(int y) {
     ycor = y;
   }
-  
+
   public void setThirst(int t) {
     thirst = t;
     if (thirst > 100) {
       thirst = 100;
     }
   }
-    
-
 }

@@ -1,4 +1,4 @@
-//DIFFERENT STATES 
+  //DIFFERENT STATES 
 int state = 0; 
 int value = 0; 
 int oldState = 0; 

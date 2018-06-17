@@ -128,10 +128,15 @@ public class Planet {
   } 
   
   public void updateItems() {
+    if (numItems > 0) {
     for (int i = 0; i <items.size(); i ++) {
       if (items.get(i).getUsed()) {
         items.remove(i);
       }
+    }
+    for (int i = 0; i < items.size(); i ++) {
+      items.get(i).drawItem();
+    }
     }
   }
 

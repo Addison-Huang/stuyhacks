@@ -15,11 +15,11 @@ void menuSetup() {
   allPlanets = new ArrayList<Planet>();
   PLANETS = new PShape[10]; 
   
-  image = loadImage("alien.jpg");
-  Planet planet0 = new Planet();
+  image = loadImage("pretty.jpg");
+  Planet planet0 = new Planet(image);
   posPlanets.add(planet0);
   
-  image = loadImage("pretty.jpg");
+  image = loadImage("alien.jpg");
   Planet planet1 = new Planet(image);
   posPlanets.add(planet1);
   
