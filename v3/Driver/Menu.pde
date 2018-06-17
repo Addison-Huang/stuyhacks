@@ -11,7 +11,7 @@ void menuSetup() {
   PLANETS = new PShape[10]; 
   for (int x = 0; x < 10; x++) { 
     Planet b = new Planet();
-    b.setImg(image.get(x));
+    b.setImg(x);
     
     posPlanets.add(b); 
   } 
@@ -52,7 +52,8 @@ void update() {
       p.addPlanet(posPlanets.remove(x)); 
   }
   for (int i = 0; i < buttons.size(); i ++) {
-    if (x >= buttons.get(i).xcor && x <= (buttons.get(i).xcor + buttons.get(i).wd) && y >= buttons.get(i).ycor && y <= (buttons.get(i).ycor + buttons.get(i).ht)) {
+    if (mouseX >= buttons.get(i).xcor && mouseX <= (buttons.get(i).xcor + buttons.get(i).wd) && mouseY >= buttons.get(i).ycor && mouseY <= (buttons.get(i).ycor + buttons.get(i).ht)) 
       buttons.get(i).col = 100; 
+  } 
   
-} 
+}
