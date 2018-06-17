@@ -4,7 +4,7 @@ public class Player {
   private double hunger;
   private int thirst;
   private int money;
-  private ArrayList<Planet> visitedPlanets; //planets visited
+  private ArrayList<Planet> visitedPlanets; //planets visited array 
   private int skyMiles;
   private int xcor;
   private int ycor;

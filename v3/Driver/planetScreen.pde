@@ -12,6 +12,8 @@ ArrayList<PImage> image;
 
 
 void planetSetup() {
+  image = new ArrayList<PImage>();
+  
   alien = loadImage("alien.jpg");
   atlantis = loadImage("atlantis.jpg"); 
   pretty= loadImage("pretty.jpg"); 
@@ -22,6 +24,7 @@ void planetSetup() {
   child= loadImage("child.jpg");
   mars= loadImage("mars.png");
   dinoWorld= loadImage("dinoWorld.jpg");
+ 
   background(0);
 
   for (int i=0; i<10; i++) {
@@ -50,4 +53,5 @@ void planetSetup() {
 }
 
 void planetDraw() {
+  
 } 
