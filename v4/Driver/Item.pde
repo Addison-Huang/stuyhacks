@@ -1,13 +1,11 @@
-public abstract class Item
-{
+public abstract class Item {
     protected String _name; 
     protected String _type; 
     protected int ycor;
     protected int xcor;
 
     //Constructors
-    public Item()
-    {
+    public Item() {
         _type = "Item";
     }
     
@@ -17,11 +15,9 @@ public abstract class Item
       ycor = int(random(displayHeight/40)) * 40;
     }
     
-
     //Accessors
     public String getType() { return _type; }
     
     public int getX() { return xcor;}
     public int getY() { return ycor;}
-
 }
