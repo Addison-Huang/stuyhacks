@@ -62,6 +62,8 @@ void keyPressed() {
       state = oldState; 
   } 
   if (key == CODED && (state == EARTH || state == MINE)) { 
+    if (state == EARTH && (p.getXcor() > .7*width && p.getXcor() < .8*width && p.getYcor() > 100 && p.getYcor() < 400))
+      state = MENU; 
     if (keyCode == UP) 
       p.move(0, -60);
     else if (keyCode == DOWN)
