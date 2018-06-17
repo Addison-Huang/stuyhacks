@@ -61,8 +61,10 @@ void keyPressed() {
     else if (state != EARTH) 
       state = oldState; 
   } 
-  if (key == CODED && (state == EARTH || state == MINE)) { 
+  if (key == CODED && (state == EARTH || state == MINE || state == PLANET)) { 
     if (state == EARTH && (p.getXcor() > .7*width && p.getXcor() < .8*width && p.getYcor() > 100 && p.getYcor() < 400))
+      state = MENU; 
+    if (state == PLANET && (p.getXcor() > .7*width && p.getXcor() < .7*width+300 && p.getYcor() > .7*height && p.getYcor() < .7*height+300))
       state = MENU; 
     if (keyCode == UP) 
       p.move(0, -60);
