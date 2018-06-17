@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+
+PImage pretty; 
+PImage rustic; 
+PImage sugarPlanet;
+PImage mystical; 
+PImage alien; 
+PImage atlantis;
+PImage creepy; 
+PImage child; 
+PImage mars;
+PImage dinoWorld;
+public ArrayList<PImage> images;
+
+
+void planetSetup() {
+  images = new ArrayList<PImage>();
+  alien = loadImage("alien.jpg");
+  images.add(alien.get());
+  atlantis = loadImage("atlantis.jpg"); 
+  images.add(atlantis.get());
+  pretty= loadImage("pretty.jpg");
+  images.add(pretty.get());
+  rustic= loadImage("rustic.png");
+  images.add(rustic.get());
+  sugarPlanet= loadImage("sugarPlanet.png");
+  images.add(sugarPlanet.get());
+  mystical= loadImage("mystical.jpg");
+  images.add(mystical.get());
+  creepy= loadImage("creepy.jpg"); 
+  images.add(creepy.get());
+  child= loadImage("child.jpg");
+  images.add(child.get());
+  mars= loadImage("mars.png");
+  images.add(mars.get());
+  dinoWorld= loadImage("dinoWorld.jpg");
+  images.add(dinoWorld.get());
+ 
+  //background(0);
+  }
+
+void planetDraw() {
+  
+} 

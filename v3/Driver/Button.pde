@@ -6,16 +6,14 @@ public class Button {
   public float ht;
   public color col;
   public String text;
-  public Planet planet;
   
-  public Button(float x,float y,float w,float h,String str,Planet world) {
+  public Button(float x,float y,float w,float h,String str) {
     xcor = (float)x;
     ycor = y;
     wd = w;
     ht = h;
     col = color(245,124,205);
     text = str;
-    planet = world;
   }
   
   void update() {

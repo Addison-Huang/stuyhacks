@@ -22,10 +22,6 @@ public class Player {
   public Planet getCurrPlanet() {
     return currPlanet;
   }
-  
-  public void setCurrPlanet(Planet d) {
-    currPlanet = d;
-  }
 
 //reprints image with augmented xcor and ycor 
   public void update() { 

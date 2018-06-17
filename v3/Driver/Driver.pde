@@ -40,8 +40,7 @@ void draw() {
     text("miles: "+p.getMiles(), width/2, height/2+60);
   } 
   else if (state == MENU)
-    menuDraw();
-    
+    menuDraw(); 
   else if (state == MINE) { 
     clear(); 
     mineUpdate(m); 
@@ -55,12 +54,8 @@ void draw() {
 void keyPressed() { 
   if (key == ESC)
     exit();
-  if (key == RETURN || key == ENTER) { 
-    if (state == STARTER) 
-      state=EARTH; 
-    else if (state != EARTH) 
-      state = oldState; 
-  } 
+  if (state==STARTER && (key==RETURN || key == ENTER))
+    state=EARTH; 
   if (key == CODED && (state == EARTH || state == MINE)) { 
     if (keyCode == UP) 
       p.move(0, -60);
@@ -75,7 +70,10 @@ void keyPressed() {
   if (key == 's') { 
     oldState = state; 
     state = STATS;
-  }  
+  } 
+  //if in stats, returns to previous screen 
+  if ((key == RETURN || key == ENTER) && (state == STATS || state == MENU || state == MINE))
+    state = oldState;  
   if (key == 'm') { 
     oldState = state;
     state = MENU;
@@ -86,5 +84,4 @@ void keyPressed() {
     p.setXcor(0);
     p.setYcor(0);
   }
-  
 }
