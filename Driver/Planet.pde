@@ -23,7 +23,7 @@ public class Planet {
     id = int(random(10000));
     food = int(random(10));
     water = int(random(10));
-    distance = id;
+    distance = int(random(10));
     mine = new Mine();
     col = int(random(255));
     //planetInd=0;
@@ -47,7 +47,7 @@ public class Planet {
     id = int(random(10000));
     food = int(random(10));
     water = int(random(10));
-    distance = int(random(10));
+    distance = id;
     mine = new Mine();
     col = int(random(255));
     //planetInd = id; 
@@ -132,7 +132,6 @@ public class Planet {
     if (numItems > 0) {
       
     for (int i = 0; i <items.size(); i ++) {
-      print(items.size());
       items.get(i).use(p);
       if (items.get(i).getUsed()) {
         
