@@ -58,13 +58,13 @@ void keyPressed() {
     state=EARTH; 
   if (key == CODED && (state == EARTH || state == MINE)) { 
     if (keyCode == UP) 
-      p.move(0, -40);
+      p.move(0, -60);
     else if (keyCode == DOWN)
-      p.move(0, 40); 
+      p.move(0, 60); 
     else if (keyCode == LEFT)
-      p.move(-40, 0); 
+      p.move(-60, 0); 
     else 
-    p.move(40, 0);
+    p.move(60, 0);
   } 
   //pops up stats
   if (key == 's') { 

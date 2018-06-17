@@ -8,7 +8,7 @@ public class Mine {
     int y = 0;
     int type = 4;
     for (int row = 0; row < blocks.length; row++) {
-      y += 40;
+      y += 60;
       x = 0;
       for (int col = 0; col < blocks[0].length; col ++) {
         //type = 4;
@@ -22,7 +22,7 @@ public class Mine {
           Block b = new Block(x, y, false, type);
           blocks[row][col] = b;
           type = 4;
-          x += 40;
+          x += 60;
         }
       }
     }
