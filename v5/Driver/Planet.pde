@@ -133,7 +133,9 @@ public class Planet {
     for (int i = 0; i <items.size(); i ++) {
       items.get(i).use(p);
       if (items.get(i).getUsed()) {
+        
         items.remove(i);
+        print(items.size());
       }
     }
     for (int i = 0; i < items.size(); i ++) {
