@@ -47,7 +47,7 @@ public class Planet {
     id = int(random(10000));
     food = int(random(10));
     water = int(random(10));
-    distance = int(random(10));
+    distance = (int)(id * .05);
     mine = new Mine();
     col = int(random(255));
     //planetInd = id; 
