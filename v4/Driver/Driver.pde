@@ -54,8 +54,12 @@ void draw() {
 void keyPressed() { 
   if (key == ESC)
     exit();
-  if (state==STARTER && (key==RETURN || key == ENTER))
-    state=EARTH; 
+  if (key == RETURN || key == ENTER) { 
+    if (state == STARTER) 
+      state=EARTH; 
+    else if (state != EARTH) 
+      state = oldState; 
+  } 
   if (key == CODED && (state == EARTH || state == MINE)) { 
     if (keyCode == UP) 
       p.move(0, -60);
@@ -70,10 +74,7 @@ void keyPressed() {
   if (key == 's') { 
     oldState = state; 
     state = STATS;
-  } 
-  //if in stats, returns to previous screen 
-  if ((key == RETURN || key == ENTER) && (state == STATS || state == MENU || state == MINE))
-    state = oldState;  
+  }  
   if (key == 'm') { 
     oldState = state;
     state = MENU;
