@@ -36,7 +36,16 @@ public class Player {
         state= ENDLOSE;
         //lose screen
   }
+  else 
     image(img, xcor, ycor, 60, 60);
+    if (xcor < 0) 
+      xcor = 0;
+    if (xcor > width) 
+      xcor = width; 
+    if (ycor < 0)
+      ycor = 0; 
+    if (ycor > height) 
+      ycor = height; 
   } 
 
   public void move(int a, int b) { 

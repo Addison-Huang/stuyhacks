@@ -59,10 +59,6 @@ void draw() {
   }
 }
 
-
-
-
-
 void keyPressed() { 
   if (key == ESC)
     exit();
