@@ -3,7 +3,6 @@ void mineUpdate(Mine x) {
   background(0);
     for (Block[] blo: x.getBlocks()) { 
       for (Block b: blo) {
-        stroke(255);
         fill(b.getColor());
         rect(b.getX(),b.getY(),60,60);
          if ((b.getX() == p.getXcor()) && (!b.getVisited()) &&b.getY() == p.getYcor()) {
