@@ -9,6 +9,7 @@ void menuSetup() {
   PLANETS = new PShape[10]; 
   for (int x = 0; x < 10; x++) { 
     Planet b = new Planet(); 
+    
     posPlanets.add(b); 
   } 
   
