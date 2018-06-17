@@ -16,15 +16,15 @@ public class Block {
     }
     else if (type == 1) { //gold
       c = #FFD700;
-      value = 10;
+      value = 500;
     }
     else if (type == 2) { //silver
       c = #C0C0C0;
-      value = 5;
+      value = 250;
     }
     else if (type == 3) { //bronze
       c = #cd7f32;
-      value = 1;
+      value = 125;
     }
     else {            //dirt
       c = #8b4513;
