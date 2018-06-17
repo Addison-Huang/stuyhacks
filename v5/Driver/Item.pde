@@ -38,7 +38,7 @@ public abstract class Item
     image(image,xcor,ycor,40,40);
   } 
   
-  pubic boolean getUsed() {
+  public boolean getUsed() {
     return used;
   }
 }

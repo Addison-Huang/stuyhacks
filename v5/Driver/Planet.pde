@@ -40,8 +40,8 @@ public class Planet {
     }
     img = null;
   }
-  
-    public Planet(int n) {
+
+  public Planet(PImage mag) {
     numItems = int(random(10));
     id = int(random(10000));
     food = int(random(10));
@@ -49,7 +49,7 @@ public class Planet {
     distance = int(random(10));
     mine = new Mine();
     col = int(random(255));
-    planetInd = id; 
+    //planetInd = id; 
     visited = false;
     items = new ArrayList<Item>();
     for (int i = 0; i < numItems; i ++) {
@@ -62,27 +62,29 @@ public class Planet {
         items.add(w);
       }
     }
-    if (n == 0) 
+    img = mag;
+    /*
+    if (n == 0)
       img = loadImage("alien.jpg");
-     else if (n == 1)
-       img =  loadImage("atlantis.jpg"); 
-            else if (n == 2)
-       img = loadImage("pretty.jpg");     
-       else if (n == 3)
-       img  = loadImage("rustic.png");      
-       else if (n == 4)
-       img  = loadImage("sugarPlanet.png");      
-       else if (n == 5)
-       img  = loadImage("mystical.jpg"); 
-            else if (n == 6)
-       img  = loadImage("creepy.jpg"); 
-            else if (n == 7)
-       img  = loadImage("child.jpg"); 
-            else if (n == 8)
-       img  = loadImage("mars.png"); 
-            else
-       img  = loadImage("dinoWorld.jpg"); 
-      
+    else if (n == 1)
+      img =  loadImage("atlantis.jpg"); 
+    else if (n == 2)
+      img = loadImage("pretty.jpg");     
+    else if (n == 3)
+      img  = loadImage("rustic.png");      
+    else if (n == 4)
+      img  = loadImage("sugarPlanet.png");      
+    else if (n == 5)
+      img  = loadImage("mystical.jpg"); 
+    else if (n == 6)
+      img  = loadImage("creepy.jpg"); 
+    else if (n == 7)
+      img  = loadImage("child.jpg"); 
+    else if (n == 8)
+      img  = loadImage("dinoWorld.jpg"); 
+   else if (n ==9)
+      img  = loadImage("mars.png");
+      */
   }
 
   public int getId() {
@@ -116,9 +118,9 @@ public class Planet {
     water = w;
     return foo;
   }
-  
+
   public PImage getImg() {
-    return img; 
+    return img;
   } 
 
   public boolean isVisited() {

@@ -40,7 +40,8 @@ void draw() {
     text("miles: "+p.getMiles(), width/2, height/2+60);
   } 
   else if (state == MENU)
-    menuDraw(); 
+    menuDraw();
+    
   else if (state == MINE) { 
     clear(); 
     mineUpdate(m); 
@@ -85,4 +86,5 @@ void keyPressed() {
     p.setXcor(0);
     p.setYcor(0);
   }
+  
 }
