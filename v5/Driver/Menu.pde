@@ -89,7 +89,8 @@ void menuDraw() {
 void update() { 
   for (int x = 0; x < posPlanets.size(); x++) { 
     if(posPlanets.get(x).isVisited())
-      p.addPlanet(posPlanets.remove(x)); 
+      p.addPlanet(posPlanets.remove(x));
+      print(posPlanets.size());
   }
   
   for (int i = 0; i < buttons.size(); i ++) {
@@ -97,7 +98,9 @@ void update() {
       buttons.get(i).col = 100;
       if(mousePressed) {
           Planet ans = buttons.get(i).planet;
+          ans.setVisited();
           p.setCurrPlanet(ans);
+          buttons.remove(i);
           state = PLANET;
            //break;
           }
