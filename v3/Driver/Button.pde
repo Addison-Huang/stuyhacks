@@ -22,6 +22,6 @@ public class Button {
     
     fill(color(0));
     textSize(25);
-    text(text, xcor+100, ycor-100, wd + 10, ht + 5);
+    text(text, xcor+70, ycor, wd + 50, ht + 100);
   }
 }
